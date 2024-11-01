@@ -34,3 +34,4 @@ if __name__ == '__main__':
     price = round(estimatePrice(milage), 2)
     print("_"*20)
     print(f"\033[0;34mFor the milage you entered:\n\033[0;33m{milage} KM\n\033[0;34mThe estimated price is:\n\033[0;33m{price} €\033[0m")
+ 
