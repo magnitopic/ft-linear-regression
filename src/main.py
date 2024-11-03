@@ -25,7 +25,7 @@ def readData(path):
         return None
 
 
-def showData(data):
+def showDataGraph(data):
     plt.figure(figsize=(4, 3))
     plt.scatter(data['km'], data['price'])
     plt.xlabel('Kilometers')
@@ -37,7 +37,7 @@ def showData(data):
     os.system('clear')
 
 
-def showPredictionLine(data, theta0, theta1):
+def showPredictionLineGraph(data, theta0, theta1):
     plt.figure(figsize=(4, 3))
     plt.scatter(data['km'], data['price'])
     plt.plot(data['km'], theta0 + theta1 * data['km'], color='red')
@@ -97,11 +97,11 @@ if __name__ == "__main__":
             print(f"{c.BLUE}Theta0: {c.YELLOW}{theta0:.2f}{c.RESET}")
             print(f"{c.BLUE}Theta1: {c.YELLOW}{theta1:.2f}{c.RESET}")
         elif choice == 3:
-            showData(data)
+            showDataGraph(data)
         elif choice == 4:
-            showPredictionLine(data, theta0, theta1)
+            showPredictionLineGraph(data, theta0, theta1)
         elif choice == 5:
-            pass
+            r_2 = linear_regression.determine_r2()
         elif choice == 6:
             print(f"{c.PURPLE}Bye! 👋{c.RESET}")
             exit()

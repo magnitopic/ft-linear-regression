@@ -50,7 +50,7 @@ $$J = \frac{1}{2m} \sum_{i=1}^{m} (\widehat{y}-(\theta_0 + \theta_1 \cdot x))^2$
 
 To minimize the cost, we need the partial derivative of the cost function.
 
-> The gradient is: $\nabla J = \left( \frac{\partial J}{\partial \theta_0} , \frac{\partial J}{\partial \theta_0} \right) $
+> The gradient is: $\nabla J = \left( \frac{\partial J}{\partial \theta_0} , \frac{\partial J}{\partial \theta_1} \right) $
 
 $$\frac{\partial J}{\partial \theta_0} = \frac{-1}{m} \sum_{i=1}^{m} (\widehat{y}-y)$$
 
@@ -68,6 +68,8 @@ $R^2$ is a metric that varies between 0 and 1, where:
 -   $R^2 = 1$: There is a perfect linear relationship between the variables (all points are on the line)
 -   $R^2 \approx 0.8$: Good fit in many contexts
 -   $R^2 < 0.2$: Poor fit, suggests non-linear relationship or no relationship at all
+
+$$R^2 = 1 - \displaystyle\frac{\sum_{i=1}^{n} (Y_i - \widehat{Y}_i)^2}{\sum_{i=1}^{n} (Y_i - \bar{Y})^2}$$
 
 ## Correlation vs Causation
 

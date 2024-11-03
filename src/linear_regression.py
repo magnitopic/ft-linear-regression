@@ -37,6 +37,13 @@ def linear_regression(X_norm, Y_norm):
     return theta0_norm, theta1_norm
 
 
+def determine_r2(Y, Y_pred):
+    ss_res = np.sum((Y - Y_pred) ** 2)
+    ss_tot = np.sum((Y - np.mean(Y)) ** 2)
+    r_squared = 1 - (ss_res / ss_tot)
+    return r_squared
+
+
 def train(data):
     X = data['km'].values
     Y = data['price'].values

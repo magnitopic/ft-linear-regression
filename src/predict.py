@@ -21,7 +21,7 @@ def prediction(theta0, theta1):
             print(f"{c.RED}Invalid input. Please try again{c.RESET}")
 
     price = round(estimatePrice(milage, theta0, theta1), 2)
-    print("_"*20)
+    print("─"*20)
     print(f"{c.GREEN}y = {theta0:.2f} + {theta1:.2f} * x{c.RESET}")
-    print("_"*20)
+    print("─"*20)
     print(f"{c.BLUE}For the milage you entered:\n{c.YELLOW}{milage} KM\n{c.BLUE}The estimated price is:\n{c.YELLOW}{price:.2f} €{c.RESET}")
