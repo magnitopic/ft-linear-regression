@@ -69,7 +69,7 @@ $R^2$ is a metric that varies between 0 and 1, where:
 -   $R^2 \approx 0.8$: Good fit in many contexts
 -   $R^2 < 0.2$: Poor fit, suggests non-linear relationship or no relationship at all
 
-$$R^2 = 1 - \displaystyle\frac{\sum_{i=1}^{n} (Y_i - \widehat{Y}_i)^2}{\sum_{i=1}^{n} (Y_i - \bar{Y})^2}$$
+$$R^2 = 1 - \dfrac{\sum_{i=1}^{n} (Y_i - \widehat{Y}_i)^2}{\sum_{i=1}^{n} (Y_i - \bar{Y})^2}$$
 
 ## Correlation vs Causation
 
