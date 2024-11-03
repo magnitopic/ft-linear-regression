@@ -2,7 +2,6 @@
 
 Your first implementation of a machine learning algorithm.
 
-
 <div align="center">
 <img width="512" alt="Screenshot 2024-11-03 at 10 10 38" src="https://github.com/user-attachments/assets/b6e46a98-1b76-4de9-86db-ed1210a772e7">
 </div>
@@ -72,6 +71,10 @@ $R^2$ is a metric that varies between 0 and 1, where:
 ```math
 R^2 = 1 - \frac{\sum_{i=1}^{n} (Y_i - \widehat{Y}_i)^2}{\sum_{i=1}^{n} (Y_i - \bar{Y})^2}
 ```
+
+-   $\sum_{i=1}^{n} (Y_i - \widehat{Y}_i)^2$ calculates the sum of squared residuals (difference between observed and predicted values).
+
+-   $\sum_{i=1}^{n} (Y_i - \bar{Y})^2$ calculates the total sum of squares (total variation in the data).
 
 ## Correlation vs Causation
 

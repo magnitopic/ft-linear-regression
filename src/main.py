@@ -101,7 +101,8 @@ if __name__ == "__main__":
         elif choice == 4:
             showPredictionLineGraph(data, theta0, theta1)
         elif choice == 5:
-            r_2 = linear_regression.determine_r2()
+            r_2 = linear_regression.determine_r2(data['km'], data['price'], theta0, theta1)
+            print(f"{c.BLUE}R² value: {c.YELLOW}{r_2:.2f}{c.RESET}")
         elif choice == 6:
             print(f"{c.PURPLE}Bye! 👋{c.RESET}")
             exit()
