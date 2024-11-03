@@ -37,6 +37,19 @@ def showData(data):
     os.system('clear')
 
 
+def showPredictionLine(data, theta0, theta1):
+    plt.figure(figsize=(4, 3))
+    plt.scatter(data['km'], data['price'])
+    plt.plot(data['km'], theta0 + theta1 * data['km'], color='red')
+    plt.xlabel('Kilometers')
+    plt.ylabel('Price')
+    plt.title('Price of cars based on their mileage')
+    plt.grid(color='green', linestyle='--', linewidth=0.5, alpha=0.5)
+    plt.tight_layout()
+    plt.show()
+    os.system('clear')
+
+
 def showMenu():
     choice = None
     while True:
@@ -66,6 +79,9 @@ def showMenu():
 
 
 if __name__ == "__main__":
+    theta0 = 0
+    theta1 = 0
+
     print(f"{c.PURPLE}\nft-linear-regression{c.RESET} - {c.YELLOW}alaparic\n")
     path = askForData()
     data = readData(path)
@@ -74,7 +90,7 @@ if __name__ == "__main__":
     while True:
         choice = showMenu()
         if choice == 1:
-            predict.prediction()
+            predict.prediction(theta0, theta1)
         elif choice == 2:
             theta0, theta1 = linear_regression.train(data)
             print(f"{c.GREEN}>> Model trained successfully!{c.RESET}")
@@ -83,7 +99,7 @@ if __name__ == "__main__":
         elif choice == 3:
             showData(data)
         elif choice == 4:
-            pass
+            showPredictionLine(data, theta0, theta1)
         elif choice == 5:
             pass
         elif choice == 6:

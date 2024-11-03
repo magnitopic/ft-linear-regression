@@ -37,10 +37,6 @@ def linear_regression(X_norm, Y_norm):
     return theta0_norm, theta1_norm
 
 
-def saveToFile(theta0, theta1):
-    pass
-
-
 def train(data):
     X = data['km'].values
     Y = data['price'].values
@@ -48,5 +44,4 @@ def train(data):
     Y_norm = normalize(Y)
     theta0_norm, theta1_norm = linear_regression(X_norm, Y_norm)
     theta0, theta1 = denormalize_theta(X, Y, theta0_norm, theta1_norm)
-    saveToFile(theta0, theta1)
     return theta0, theta1
