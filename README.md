@@ -2,6 +2,11 @@
 
 Your first implementation of a machine learning algorithm.
 
+
+<div align="center">
+<img width="512" alt="Screenshot 2024-11-03 at 10 10 38" src="https://github.com/user-attachments/assets/b6e46a98-1b76-4de9-86db-ed1210a772e7">
+</div>
+
 ## Description
 
 This project is about implementing a simple linear regression algorithm. The goal is to predict the price of a car based on its mileage.
