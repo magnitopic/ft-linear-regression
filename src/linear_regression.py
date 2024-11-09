@@ -1,7 +1,4 @@
-import json
 import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
 
 LEARNING_RATE = 0.01
 NUM_ITERATIONS = 1000
@@ -20,13 +17,13 @@ def denormalize_theta(X, Y, theta0_norm, theta1_norm):
 def linear_regression(X_norm, Y_norm):
     theta0_norm = 0
     theta1_norm = 0
+    m = len(X_norm)  # number of points
 
     for _ in range(NUM_ITERATIONS):
         # current prediction
-        Y_pred_norm = theta1_norm * X_norm + theta0_norm
+        Y_pred_norm = theta0_norm + theta1_norm * X_norm
 
         # gradients
-        m = len(X_norm)  # number of points
         D_theta0_norm = (1/m) * np.sum(Y_pred_norm - Y_norm)
         D_theta1_norm = (1/m) * np.sum(X_norm * (Y_pred_norm - Y_norm))
 

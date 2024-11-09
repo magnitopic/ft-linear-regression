@@ -1,4 +1,3 @@
-import json
 import aux.colors as c
 
 
@@ -22,6 +21,6 @@ def prediction(theta0, theta1):
 
     price = round(estimatePrice(milage, theta0, theta1), 2)
     print("─"*20)
-    print(f"{c.GREEN}y = {theta0:.2f} + {theta1:.2f} * x{c.RESET}")
+    print(f"{c.GREEN}y = {theta0:.2f} + {theta1:.3f} * x{c.RESET}")
     print("─"*20)
     print(f"{c.BLUE}For the milage you entered:\n{c.YELLOW}{milage} KM\n{c.BLUE}The estimated price is:\n{c.YELLOW}{price:.2f} €{c.RESET}")

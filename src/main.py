@@ -93,9 +93,9 @@ if __name__ == "__main__":
             predict.prediction(theta0, theta1)
         elif choice == 2:
             theta0, theta1 = linear_regression.train(data)
-            print(f"{c.GREEN}>> Model trained successfully!{c.RESET}")
+            print(f"{c.BLUE}>> {c.GREEN}Model trained successfully!{c.RESET}")
             print(f"{c.BLUE}Theta0: {c.YELLOW}{theta0:.2f}{c.RESET}")
-            print(f"{c.BLUE}Theta1: {c.YELLOW}{theta1:.2f}{c.RESET}")
+            print(f"{c.BLUE}Theta1: {c.YELLOW}{theta1:.3f}{c.RESET}")
         elif choice == 3:
             showDataGraph(data)
         elif choice == 4:
